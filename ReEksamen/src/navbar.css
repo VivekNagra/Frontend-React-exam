@@ -1,0 +1,37 @@
+/* Navbar container */
+nav {
+    background-color: #333; /* Example background color */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+/* Unordered list within the navbar */
+nav ul {
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style-type: none; /* Removes default list styling */
+    width: 100%; /* Set width to fill the container */
+}
+
+/* List items within the unordered list */
+nav ul li {
+    flex: 1 1 0; /* Grow to fill the space, don't shrink, base width of 0 */
+    text-align: center; /* Center text within each item */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+/* Links within the list items */
+nav ul li a {
+    display: block; /* Make links block-level elements */
+    color: white; /* Example text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px; /* Add some padding for spacing */
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li {
+        flex-basis: 50%; /* Each item takes up at least 50% of the line */
+    }
+}
