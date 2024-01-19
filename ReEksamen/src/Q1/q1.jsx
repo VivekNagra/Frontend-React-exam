@@ -9,7 +9,9 @@ const HigherOrderFunction = () =>{
     const numbers=[1, 2, 3, 4, 5];
 
     const handleClick = () =>{
-       const doubled = numbers.map((number, index) => <li key={index} > {number * 2} </li>);
+       const doubled = numbers.map((number, index) => { 
+       <li key={index} > {number * 2} </li> 
+      });
        setResult(doubled);
        setToggle(!toggle);
     }
@@ -44,7 +46,7 @@ const ReactComponent = () => {
 
 const ReactRoutingExample = () => {
     return (
-    <>
+    <div>
       <h1>React Routing</h1>
       <p>Routing</p>
       <ul>
@@ -52,7 +54,7 @@ const ReactRoutingExample = () => {
         <li>Tillader rendering af specifikke komponenter</li>
         <li>Binde et komponent til en URL</li>
       </ul>
-    </>
+    </div>
   );
 }
 
@@ -60,12 +62,12 @@ const ReactRoutingExample = () => {
 
 const Q1 = () => {
   return (
-    <>
+    <div>
       <HigherOrderFunction />
       <ReactComponent />
       <ReactRoutingExample />
-    </>
+    </div>
   );
 };
 
-export default {Q1};
+export default Q1;

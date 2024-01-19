@@ -11,6 +11,7 @@ import Q4 from './Q4/q4';
 
 function App() {
   return (
+    <div>
     <Router>
       <div>
         <h1>Frontend Exam 3 Semester</h1>
@@ -25,6 +26,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </div>
   );
 }
 

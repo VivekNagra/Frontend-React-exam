@@ -8,7 +8,7 @@ const CallbackExample = () => {
         };
     
         return (
-            <>
+            <div>
                 <h2>Callback funktioner</h2>
                 <ul>
                     <li>En funktion der bruges som argument i en anden</li>
@@ -16,13 +16,13 @@ const CallbackExample = () => {
                 <p>Callback funktion</p>
                 <button onClick={incrementCounter}>Klik Mig</button>
                 <p>Antal klik: {counter}</p>
-            </>
+            </div>
     );
 }
 
 const JsxExample = () => {
     return (
-        <>
+        <div>
             <h2>JSX</h2>
             <p>JSX er en syntaks udvidelse til JavaScript</p>
             <ul>
@@ -30,13 +30,13 @@ const JsxExample = () => {
                 <li>Bruges til at returnere HTML i React</li>
                 <li>Bliver oversat til JavaScript</li>
             </ul>
-        </>
+        </div>
     );
 }
 
 const StylingExample = () => {
     return (
-        <>
+        <div>
             <h2>Styling</h2>
             <h3>Grid & Flexbox</h3>
             <p>Grid</p>
@@ -52,7 +52,7 @@ const StylingExample = () => {
                 <li>laver opdelinger af elementer til samme str.</li>
                 <li></li>
             </ul>
-        </>
+        </div>
     );
 }
 
@@ -65,4 +65,4 @@ const Q2 = () => {
         </>
     )
 }
-export default {Q2};
+export default Q2;
