@@ -13,6 +13,7 @@ import Q6 from './Q6/q6';
 import EventsExample from './Q7/q7';
 import Q8 from './Q8/q8';
 import Q9 from './Q9/q9';
+import SubrouteExample from './Q9/subrouteExample';
 
 function App() {
 
@@ -32,15 +33,13 @@ function App() {
     });
   };
 
-
-
-
   return (
     <div>
     <Router>
       <div>
         <h1>Frontend Exam</h1>
         <Navbar />
+        {/* <ErrorBoundry /> rundt om alle routes */ }
         <Routes>
           <Route path="/" element={<h1>Homepage</h1>} />
           <Route path="/question1" element={<Q1 />} />
@@ -51,7 +50,9 @@ function App() {
           <Route path="/question6" element={<Q6 />} />
           <Route path="/question7" element={< EventsExample userProfile={userProfile} updateProfile={updateProfile}/>} />
           <Route path="/question8" element={<Q8 />} />
-          <Route path="/question9" element={<Q9 />} />
+          <Route path="/question9" element={<Q9 />} >
+            <Route path="/question9/details" element={<SubrouteExample />} />
+          </Route>
           {/* Add other routes for your components */}
         </Routes>
       </div>

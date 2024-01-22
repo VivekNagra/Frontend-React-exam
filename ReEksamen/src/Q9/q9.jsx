@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Outlet } from 'react-router-dom';
+
 
 function MyForm() {
  
@@ -26,11 +28,21 @@ function MyForm() {
   );
 }
 
+const SubrouteExample = () => {
+    return (
+        <>
+            <h1>Subroute Example</h1>
+        </>
+    );
+};
+
+
 const Q9 = () => {
     return (
         <>
             <h1>Q9</h1>
             <MyForm />
+            <Outlet />
         </>
     );
 

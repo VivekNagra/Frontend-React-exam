@@ -1,8 +1,12 @@
-import React from 'react';
-import './Navbar.css';
+import { useState } from 'react';
+
+
+import './navbar.css';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+    const [showDropdown, setShowDropdown] = useState(false);
+
     return (
         <nav>
             <ul>
@@ -15,7 +19,18 @@ const Navbar = () => {
                 <li><NavLink to="/question6">Question 6</NavLink></li>
                 <li><NavLink to="/question7">Question 7</NavLink></li>
                 <li><NavLink to="/question8">Question 8</NavLink></li>
-                <li><NavLink to="/question9">Question 9</NavLink></li>
+
+                <li onMouseEnter={() => setShowDropdown(true)} 
+                    onMouseLeave={() => setShowDropdown(false)}>
+                    <NavLink to="/question9">Question 9</NavLink>
+                    {showDropdown && (
+                        <ol className="dropdown">
+                            <li><NavLink to="/question9">Contrl./Unctrl. Components</NavLink></li>
+                            <li><NavLink to="/question9/details">Details</NavLink></li>
+                        </ol>
+                    )}
+                </li>
+
                 <li><NavLink to="/question10">Question 10</NavLink></li>
                 <li><NavLink to="/question11">Question 11</NavLink></li>
                 <li><NavLink to="/question12">Question 12</NavLink></li>
