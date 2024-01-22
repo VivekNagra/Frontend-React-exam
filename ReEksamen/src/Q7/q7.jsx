@@ -1,15 +1,7 @@
-import './callback.css';
+/* eslint-disable react/prop-types */
 
-import PropTypes from 'prop-types';
 
 const EventsExample = ({ userProfile, updateProfile }) => {
-  // component code here
-};
-
-EventsExample.propTypes = {
-  userProfile: PropTypes.object.isRequired,
-  updateProfile: PropTypes.func.isRequired,
-};
 
     const handleSubmit = (event) => {
         event.preventDefault(); 
@@ -51,13 +43,6 @@ EventsExample.propTypes = {
 };
 
 
-const Q7 = () => {
-    return (
-        <>
-            <EventsExample />
-        </>
-    );
 
-}
 
-export default Q7;
+export default EventsExample;

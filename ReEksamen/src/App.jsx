@@ -9,8 +9,8 @@ import Q2 from './Q2/q2';
 import Q3 from './Q3/q3';
 import Q4 from './Q4/q4';
 import Q5 from './Q5/q5';
-
-import Q7 from './Q7/q7';
+import Q6 from './Q6/q6';
+import EventsExample from './Q7/q7';
 import Q8 from './Q8/q8';
 import Q9 from './Q9/q9';
 
@@ -48,8 +48,8 @@ function App() {
           <Route path="/question3" element={<Q3 />} />
           <Route path="/question4" element={<Q4 />} />
           <Route path="/question5" element={<Q5 />} />
-
-          <Route path="/question7" element={<Q7 userProfile={userProfile} updateProfile={updateProfile}/>} />
+          <Route path="/question6" element={<Q6 />} />
+          <Route path="/question7" element={< EventsExample userProfile={userProfile} updateProfile={updateProfile}/>} />
           <Route path="/question8" element={<Q8 />} />
           <Route path="/question9" element={<Q9 />} />
           {/* Add other routes for your components */}

@@ -8,8 +8,8 @@ function MyForm() {
   // Handler til at opdatere input værdien og tjekke om det et over 6 tegn
   const handleInputChange = (event) => {
     const newValue = event.target.value;
-    setInputValue(newValue); // Update the input value
-    setIsValid(newValue.length >= 6); // Check if the length is 6
+    setInputValue(newValue); 
+    setIsValid(newValue.length >= 6); 
   };
 
   return (
