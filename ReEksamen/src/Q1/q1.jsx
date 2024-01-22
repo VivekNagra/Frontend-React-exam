@@ -2,16 +2,18 @@
 import React, {useState} from 'react';
 
 
-const HigherOrderFunction = () =>{
+const HigherOrderFunction = () => {
     const [result, setResult] = useState("");
     const [toggle, setToggle] = useState(false);
 
     const numbers=[1, 2, 3, 4, 5];
 
     const handleClick = () =>{
-       const doubled = numbers.map((number, index) => { 
-       <li key={index} > {number * 2} </li> 
-      });
+       const doubled = numbers.map((number, index) => (
+       <li key={index}> {number * 2} </li> 
+
+       ));
+      console.log("numbers were doubled succesfully");
        setResult(doubled);
        setToggle(!toggle);
     }
@@ -52,7 +54,7 @@ const ReactRoutingExample = () => {
       <ul>
         <li>Single Page Application</li>
         <li>Tillader rendering af specifikke komponenter</li>
-        <li>Binde et komponent til en URL</li>
+        <li>Indlæsning af komponent ud fra URL</li>
       </ul>
     </div>
   );

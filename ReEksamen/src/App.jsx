@@ -8,13 +8,38 @@ import Q1 from './Q1/q1';
 import Q2 from './Q2/q2';
 import Q3 from './Q3/q3';
 import Q4 from './Q4/q4';
+import Q5 from './Q5/q5';
+
+import Q7 from './Q7/q7';
+import Q8 from './Q8/q8';
+import Q9 from './Q9/q9';
 
 function App() {
+
+  const [userProfile, setUserProfile] = useState({
+    name: "",
+    age: 0,
+    email: "",
+    bio:"",
+    married: false
+  })
+
+  const updateProfile = (e) => {
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    setUserProfile({
+      ...userProfile,
+      [e.target.name]: value
+    });
+  };
+
+
+
+
   return (
     <div>
     <Router>
       <div>
-        <h1>Frontend Exam 3 Semester</h1>
+        <h1>Frontend Exam</h1>
         <Navbar />
         <Routes>
           <Route path="/" element={<h1>Homepage</h1>} />
@@ -22,6 +47,11 @@ function App() {
           <Route path="/question2" element={<Q2 />} />
           <Route path="/question3" element={<Q3 />} />
           <Route path="/question4" element={<Q4 />} />
+          <Route path="/question5" element={<Q5 />} />
+
+          <Route path="/question7" element={<Q7 userProfile={userProfile} updateProfile={updateProfile}/>} />
+          <Route path="/question8" element={<Q8 />} />
+          <Route path="/question9" element={<Q9 />} />
           {/* Add other routes for your components */}
         </Routes>
       </div>
