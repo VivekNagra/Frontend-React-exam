@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
 
-function MyForm() {
+const PassForm = () => {
  
   const [inputValue, setInputValue] = useState('');
   const [isValid, setIsValid] = useState(false);
@@ -16,15 +16,13 @@ function MyForm() {
 
   return (
     <form>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={handleInputChange}
-      />
+      <input type="text" value={inputValue} onChange={handleInputChange}/>
       {isValid ? <p>Input is over 6 characters</p> : <p>Input must be 6 characters long</p>}
       <br/>
       {isValid ? <button>Valid</button> : <button disabled>Not valid</button> }
+      
     </form>
+    
   );
 }
 
@@ -41,7 +39,7 @@ const Q9 = () => {
     return (
         <>
             <h1>Q9</h1>
-            <MyForm />
+            <PassForm />
             <Outlet />
         </>
     );

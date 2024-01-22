@@ -26,7 +26,7 @@ const Navbar = () => {
                     {showDropdown && (
                         <ol className="dropdown">
                             <li><NavLink to="/question9">Contrl./Unctrl. Components</NavLink></li>
-                            <li><NavLink to="/question9/details">Details</NavLink></li>
+                            <li><NavLink to="/SubrouteExample">Sub Route ex.</NavLink></li>
                         </ol>
                     )}
                 </li>

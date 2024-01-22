@@ -13,7 +13,7 @@ import Q6 from './Q6/q6';
 import EventsExample from './Q7/q7';
 import Q8 from './Q8/q8';
 import Q9 from './Q9/q9';
-import SubrouteExample from './Q9/subrouteExample';
+import SubrouteExample from './Q9/q9';
 
 function App() {
 
@@ -48,10 +48,10 @@ function App() {
           <Route path="/question4" element={<Q4 />} />
           <Route path="/question5" element={<Q5 />} />
           <Route path="/question6" element={<Q6 />} />
-          <Route path="/question7" element={< EventsExample userProfile={userProfile} updateProfile={updateProfile}/>} />
+          <Route path="/question7" element={<EventsExample userProfile={userProfile} updateProfile={updateProfile}/>} />
           <Route path="/question8" element={<Q8 />} />
           <Route path="/question9" element={<Q9 />} >
-            <Route path="/question9/details" element={<SubrouteExample />} />
+            <Route path="SubrouteExample" element={<SubrouteExample />} />
           </Route>
           {/* Add other routes for your components */}
         </Routes>
