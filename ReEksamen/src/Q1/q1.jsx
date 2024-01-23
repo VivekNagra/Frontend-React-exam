@@ -1,36 +1,42 @@
 // Higher order funtion example with a component
 import React, {useState} from 'react';
 
-
 const HigherOrderFunction = () => {
-    const [result, setResult] = useState("");
-    const [toggle, setToggle] = useState(false);
+  const [people, setPeople] = useState([
+    { id: 1, name: "Alice", age: 25 },
+    { id: 2, name: "Bob", age: 30 },
+    { id: 3, name: "Charlie", age: 35 },
+    { id: 4, name: "Diana", age: 40 }
+  ]);
 
-    const numbers=[1, 2, 3, 4, 5];
+  
+  const incrementAges = () => {
+    const updatedPeople = people.map(person => ({
+      ...person,
+      age: person.age + 1
+    }));
+    setPeople(updatedPeople);
+  };
 
-    const handleClick = () =>{
-       const doubled = numbers.map((number, index) => (
-       <li key={index}> {number * 2} </li> 
+  return (
+    <div className="container">
+      <h1 className="main-title">People Lists</h1>
 
-       ));
-      console.log("numbers were doubled succesfully");
-       setResult(doubled);
-       setToggle(!toggle);
-    }
+      <div className="list-container">
+        <h2 className="list-title">Original List</h2>
+        <ul className="people-list">
+          {people.map(person => (
+            <li key={person.id} className="person-item">
+              ID: {person.id}, Name: {person.name}, Age: {person.age}
+            </li>
+          ))}
+        </ul>
+      </div>
 
-    return (
-        <>
-            <h1>Higher Order Function</h1>
-            <h2>{numbers}</h2>
-            <p>click the button below to see the numbers get doubled, using a Higher-Order Function</p>
-            <button onClick={handleClick}>Click me</button>
-            <ul>
-                {toggle && result}
-            </ul>
-        </>
-        );
-        
-}
+      <button className="increment-button" onClick={incrementAges}>Increment Ages</button>
+    </div>
+  );
+};
 
 const ReactComponent = () => {
     return (
