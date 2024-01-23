@@ -12,8 +12,8 @@ import Q5 from './Q5/q5';
 import Q6 from './Q6/q6';
 import EventsExample from './Q7/q7';
 import Q8 from './Q8/q8';
-import Q9 from './Q9/q9';
-import SubrouteExample from './Q9/q9';
+import {Q9, SubrouteExample} from './Q9/q9';
+
 
 function App() {
 
@@ -54,6 +54,7 @@ function App() {
             <Route path="SubrouteExample" element={<SubrouteExample />} />
           </Route>
           {/* Add other routes for your components */}
+          <Route path="*" element={<h1>404 - Page not found</h1>} />
         </Routes>
       </div>
     </Router>

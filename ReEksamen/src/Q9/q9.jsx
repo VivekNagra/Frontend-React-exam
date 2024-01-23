@@ -37,13 +37,13 @@ const SubrouteExample = () => {
 
 const Q9 = () => {
     return (
-        <>
+        <div>
             <h1>Q9</h1>
             <PassForm />
             <Outlet />
-        </>
+        </div>
     );
 
 }
 
-export default Q9;
+export {Q9, SubrouteExample};
