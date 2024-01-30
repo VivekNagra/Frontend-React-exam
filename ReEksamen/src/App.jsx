@@ -14,8 +14,30 @@ import EventsExample from './Q7/q7';
 import Q8 from './Q8/q8';
 import {Q9, SubrouteExample} from './Q9/q9';
 
+import facade from './apiFacade';
+import Login from './login/loginForm';
+
+
 
 function App() {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [user, setUser] = useState({name: "", roles: ""});
+
+  const login = (user, pass) => {
+    facade.login(user, pass).then(() => {
+      const token = facade.readJwtToken(facade.getToken());
+      setUser({ name: token.username, roles: token.roles });
+      setLoggedIn(true);
+    });
+  };
+
+  const logout = () => {
+    facade.logout();
+    setLoggedIn(false);
+    setUser({ name: "", roles: "" });
+  };
+
 
   const [userProfile, setUserProfile] = useState({
     name: "",
